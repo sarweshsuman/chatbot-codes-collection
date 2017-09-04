@@ -1,6 +1,11 @@
+""" 
+This is sample api ai implementation for chatbot 
+It is by no means production like. It only helps in starting of with the work.
+"""
+
 import apiai
 import json
-CLIENT_ACCESS_TOKEN = 'ae6d19c095214007a01be09fcb5c3e2c'
+CLIENT_ACCESS_TOKEN = 'CLIENT_ACCESS_TOKEN'
 
 class Bot(object):
     _contexts=[]
