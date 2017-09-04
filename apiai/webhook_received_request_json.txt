@@ -15,14 +15,14 @@ Request:
             "geo-city": "",
             "url": [],
             "address": "",
-            "any": "What does Aricent do"
+            "any": "What does Your Company do"
         },
         "contexts": [
             {
                 "name": "corporate",
                 "parameters": {
                     "ordinal": "",
-                    "any.original": "What does Aricent do?",
+                    "any.original": "What does Your Company do?",
                     "url": [],
                     "ordinal.original": "",
                     "number": [],
@@ -39,7 +39,7 @@ Request:
                 "lifespan": 5
             }
         ],
-        "resolvedQuery": "What does Aricent do?",
+        "resolvedQuery": "What does Your Company do?",
         "source": "agent",
         "score": 1.0,
         "speech": "",
