@@ -1,0 +1,65 @@
+Request:
+{
+    "lang": "en",
+    "status": {
+        "errorType": "success",
+        "code": 200
+    },
+    "timestamp": "2017-09-04T06:28:55.303Z",
+    "sessionId": "2457dfaf-d79a-4a74-b9dd-6d14edbdf119",
+    "result": {
+        "parameters": {
+            "ordinal": "",
+            "geo-state-us": "",
+            "number": [],
+            "geo-city": "",
+            "url": [],
+            "address": "",
+            "any": "What does Aricent do"
+        },
+        "contexts": [
+            {
+                "name": "corporate",
+                "parameters": {
+                    "ordinal": "",
+                    "any.original": "What does Aricent do?",
+                    "url": [],
+                    "ordinal.original": "",
+                    "number": [],
+                    "geo-city": "",
+                    "number.original": "",
+                    "url.original": "",
+                    "address": "",
+                    "geo-state-us": "",
+                    "geo-city.original": "",
+                    "geo-state-us.original": "",
+                    "address.original": "",
+                    "any": "What does Aricent do"
+                },
+                "lifespan": 5
+            }
+        ],
+        "resolvedQuery": "What does Aricent do?",
+        "source": "agent",
+        "score": 1.0,
+        "speech": "",
+        "fulfillment": {
+            "messages": [
+                {
+                    "speech": "It is an awesome company",
+                    "type": 0
+                }
+            ],
+            "speech": "It is an awesome company"
+        },
+        "actionIncomplete": false,
+        "action": "",
+        "metadata": {
+            "intentId": "ed074994-103d-44c9-83d3-cc9f47e9c28d",
+            "webhookForSlotFillingUsed": "false",
+            "intentName": "Corporate",
+            "webhookUsed": "true"
+        }
+    },
+    "id": "9bc14ac9-3245-447e-b737-587c517d50e9"
+}
