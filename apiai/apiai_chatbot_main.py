@@ -20,6 +20,7 @@ class Bot(object):
     def handle(self, text):
         self.request.query = text
         response = self.request.getresponse().read().decode("utf-8")
+ 	print(response)
         contexts = json.loads(response)['result']['contexts']
 	if len(contexts) != 0:
 		self._contexts.append(contexts[0])

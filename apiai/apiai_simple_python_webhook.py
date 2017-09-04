@@ -13,9 +13,20 @@ def webhook():
     req = request.get_json(silent=True, force=True)
     print("Request:")
     print(json.dumps(req, indent=4))
-    res = "Hi, this is a sample web hook implementation"
+    res = {
+    "displayText": "Its an awesome Company",
+    "speech": "Its an awesome Company",
+    "source": "apiai_simple_python_webhook",
+    "data": {
+    }
+}
+
+    res = json.dumps(res, indent=4)
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
+    print("Sending Response")
+    print(r.data)
+    print(r.headers)
     return r
 
 if __name__ == '__main__':
