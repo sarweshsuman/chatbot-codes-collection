@@ -16,27 +16,54 @@ import json
 states = []
 
 def extract_info(json_data):
-	dicti = {
-			'entities':[],
+	global states
+	current_state = {
+			'entities':{},
 			'intent':'unknown'
 	}
-	already_existing=dicti
-	if len(states) > 0:
-		already_existing = states.pop()
+	
+	# Extracting state from current message
+
 	if 'entities' in json_data:
 		for entity in json_data['entities']:
 			ent = entity['entity']
 			ent_value = entity['value']
-			dicti['entities'].append({ent:ent_value})
+			current_state['entities'][ent]=ent_value
 	if 'intent' in json_data:
-		dicti['intent']=json_data['intent']['name']
-	if already_existing['intent'] == dicti['intent']:
-		# Not merging intent right now.
-		states.append(already_existing)
-		return dicti
-	states.append(already_existing)
-	states.append(dicti)
-	return dicti
+		current_state['intent']=json_data['intent']['name']
+
+	# State extraction complete
+
+	if len(states) == 0:
+		print("First state")
+		states.append(current_state)
+		return current_state
+
+	new_states = []
+	state_index=len(states) - 1
+	matched=False
+
+	while len(states) > 0:
+		state = states.pop()
+		if state['intent'] == current_state['intent']:
+			matched=True
+			for ent in current_state['entities']:
+				state['entities'][ent]=current_state['entities'][ent]
+			new_states.append(state)
+			break
+		# expire old states here
+		new_states.insert(0,state)
+		state_index -= 1
+	while len(states) > 0:
+		state = states.pop()
+		# expire old states here
+		new_states.insert(0,state)
+	
+	if matched == False:
+		# None of the state was matched
+		new_states.append(current_state)
+	states = new_states
+	return current_state
 
 if len(sys.argv) != 3:
 	print("Incorrect amount of input parameters")
@@ -54,6 +81,5 @@ interpreter = Interpreter.load(metadata,RasaNLUConfig(config_to_use))
 while True:
 	question = raw_input("Me:")
 	json_data=interpreter.parse(question.decode('utf-8'))
-	extract_info(json_data)
-	print states
-
+	current_state=extract_info(json_data)
+	print("Total state {}\nCurrent state {}".format(states,current_state))
