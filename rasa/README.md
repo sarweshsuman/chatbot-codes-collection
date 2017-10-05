@@ -1,17 +1,23 @@
-This is implementation of intent classification and entity extraction using rasa framework
+# Rasa NLU Sample Implementation
+
+## This is implementation of intent classification and entity extraction using rasa framework
 
 Usage pattern
 
+```
 python predict.py ./config_mitie.json model_20170908-063537_MITIE
+```
 
-Data set is not uploaded to github
+** Dataset is not uploaded to github **
 
 Context is created as an stack of states variable.
+> This is sample implementation, but incase you are using rasa-core then context implementation can be done via slots.
 
 states variable stores dictionary of {entities:{},intent:}
 
 algorithm is
 
+```
 extract entity and intent from message
 
 if it is first message then push to stack by default
@@ -25,4 +31,6 @@ if no match is found then current state is new state hence push it to the top of
 Next to generate response current_state and top of the stack state can be used. 
 
 Current state might not have any entities but top of the stack state might have entities which can be used to generate response.
+```
 
+To train rasa-nlu
