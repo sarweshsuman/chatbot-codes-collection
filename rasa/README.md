@@ -3,9 +3,11 @@
 Rasa-NLU provides two models out of the box,
 - MITIE
 - SpaCy + sklearn
+
 We can use combinations in following ways,
  - MITIE + sklearn
  - SpaCy _ sklearn
+
 > Performance of these models varies depending on the domain and dataset.
 
 ## This is implementation of intent classification and entity extraction using rasa framework
