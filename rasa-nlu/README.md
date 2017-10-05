@@ -1,5 +1,7 @@
 # Rasa NLU Sample Implementation
 
+[Official Documentation](http://rasa-nlu.readthedocs.io/en/latest/tutorial.html)
+
 Rasa-NLU provides two models out of the box,
 - MITIE
 - SpaCy + sklearn
