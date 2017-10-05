@@ -1,4 +1,5 @@
-To generate response from fullfilment, you have to follow the response structure in path - https://api.ai/docs/fulfillment#response.
+
+##To generate response from fullfilment, you have to follow the response structure in path - https://api.ai/docs/fulfillment#response.
 
 The code present here, sends a very simple static response 
 {
