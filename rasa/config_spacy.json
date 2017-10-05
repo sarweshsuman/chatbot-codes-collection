@@ -1,5 +1,5 @@
 {
   "pipeline": "spacy_sklearn",
   "path" : "./models",
-  "data" : "./data/aricent-dot-com.json"
+  "data" : "./data/sample-dataset.json"
 }
