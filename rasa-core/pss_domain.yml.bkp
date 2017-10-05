@@ -1,0 +1,48 @@
+slots:
+ software_name:
+   type: text
+ software_version:
+   type: text 
+ whatisrequired:
+   type: text
+ destination_location:
+   type: text
+ source_location:
+   type: text
+
+intents:
+ - greet
+ - product_information
+ - product_deployment
+
+entities:
+ - software_name
+ - software_version
+ - whatisrequired
+ - source_location
+ - destination_location
+
+templates:
+  utter_greet:
+    - "hello there"
+  utter_ask_software_name:
+    - "what is the software name?"
+  utter_ask_software_version:
+    - "what is the software version?"
+  utter_ask_source_location:
+    - "what is the source location?"
+  utter_ask_destination_location:
+    - "what is the destination location?"
+  utter_ask_whatisrequired:
+    - "are you looking for hardware requirement or feature of this software?"
+
+actions:
+  - greet
+  - ask_software_name
+  - ask_software_version
+  - ask_whatisrequired
+  - ask_destination_location
+  - ask_source_location
+  - actions.ActionSaveToSlots
+  - actions.ActionFetchProductInformation
+  - actions.ActionProductDeployment

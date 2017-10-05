@@ -1,0 +1,37 @@
+slots:
+ software_name:
+   type: text
+ software_version:
+   type: text 
+ whatisrequired:
+   type: text
+ destination_location:
+   type: text
+ source_location:
+   type: text
+
+intents:
+ - greet
+ - product_information
+ - product_deployment
+ - update_slots
+
+entities:
+ - software_name
+ - software_version
+ - whatisrequired
+ - source_location
+ - destination_location
+
+templates:
+  utter_greet:
+    - "hello there"
+  utter_updated_slots:
+    - "Okay, Updated!"
+
+actions:
+  - greet
+  - updated_slots
+  - actions.ActionSaveToSlots
+  - actions.ActionFetchProductInformation
+  - actions.ActionProductDeployment

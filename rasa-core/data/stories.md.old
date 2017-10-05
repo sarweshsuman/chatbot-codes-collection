@@ -1,0 +1,99 @@
+## story_001
+* _greet
+   - action_greet
+* _product_information[software_name=hss,software_version=6.0,whatisrequired=hardware]
+   - action_save_to_slots
+   - action_hardware_requirements
+
+## story_002
+* _greet
+   - action_greet
+* _product_information[software_name=hss,software_version=6.0,whatisrequired=feature]
+   - action_save_to_slots
+   - action_fetch_features
+
+## story_003
+* _greet
+   - action_greet
+* _product_information
+   - action_ask_software_name
+* _product_information[software_name=hss]
+   - action_save_to_slots
+   - action_ask_software_version
+* _product_information[software_version=6.0]
+   - action_save_to_slots
+   - action_ask_whatisrequired
+* _product_information[whatisrequired=feature]
+   - action_save_to_slots
+   - action_fetch_features
+
+## story_004
+* _greet
+   - action_greet
+* _product_information
+   - action_ask_software_name
+* _product_information[software_name=hss]
+   - action_save_to_slots
+   - action_ask_software_version
+* _product_information[software_version=6.0]
+   - action_save_to_slots
+   - action_ask_whatisrequired
+* _product_information[whatisrequired=hardware]
+   - action_save_to_slots
+   - action_hardware_requirements
+      
+## story_005
+* _greet
+   - action_greet
+* _product_information[software_name=hss,software_version=6.0]
+   - action_save_to_slots
+   - action_ask_whatisrequired
+* _product_information[whatisrequired=hardware]
+   - action_save_to_slots
+   - action_hardware_requirements
+   
+## story_006
+* _greet
+   - action_greet
+* _product_information[software_name=hss,software_version=6.0]
+   - action_save_to_slots
+   - action_ask_whatisrequired
+* _product_information[whatisrequired=feature]
+   - action_save_to_slots
+   - action_fetch_features
+
+## story_007
+* _greet
+   - action_greet
+* _product_information[software_name=hss]
+   - action_save_to_slots
+   - action_ask_software_version
+* _product_information[software_version=6.0]
+   - action_save_to_slots
+   - action_ask_whatisrequired
+* _product_information[whatisrequired=hardware]
+   - action_save_to_slots
+   - action_hardware_requirements   
+
+## story_008
+* _greet
+   - action_greet
+* _product_information[software_name=hss]
+   - action_save_to_slots
+   - action_ask_software_version
+* _product_information[software_version=6.0]
+   - action_save_to_slots
+   - action_ask_whatisrequired   
+* _product_information[whatisrequired=feature]
+   - action_save_to_slots
+   - action_fetch_features
+
+## story_009
+* _product_information[software_name=hss,software_version=6.0,whatisrequired=hardware]
+   - action_save_to_slots
+   - action_hardware_requirements
+
+## story_010
+* _product_information[software_name=hss,software_version=6.0,whatisrequired=feature]
+   - action_save_to_slots
+   - action_fetch_features
