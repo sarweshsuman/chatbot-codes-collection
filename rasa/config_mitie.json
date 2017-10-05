@@ -2,5 +2,5 @@
   "pipeline": "mitie",
   "mitie_file": "./MITIE_models/MITIE-models/english/total_word_feature_extractor.dat",
   "path" : "./models",
-  "data" : "./data/aricent-dot-com.json"
+  "data" : "./data/sample-dataset.json"
 }
