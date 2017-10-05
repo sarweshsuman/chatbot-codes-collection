@@ -39,6 +39,7 @@ There are no configurations defined, will try to deploy with information we have
 Deployment status (False, 'File /home/software_dump/dudu-2.0.tar not found')
 ```
 
+Sample output 2
 ### In this output deployment succeeds
 ```
 hi
