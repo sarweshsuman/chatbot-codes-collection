@@ -21,42 +21,42 @@ Sample output 1
 ### In this output deployment fails
 ```
 Bot loaded. Type a message and press enter :
-hi
-hello there
-what are the features of software dudu
-what is the software version?
-2.0
-feature for software dudu version 2.0 is DUMMY VARIABLE 1 DUMMY VARIABLE 2
-what is its hardware requirement?
-hardware for software dudu version 2.0 is DUMMY VARIABLE 1 DUMMY VARIABLE 2
-deploy it please
-what is the source_location?
-/home/software_dump/
-what is the destination_location?
-tomcat
-Missing configuration in 'software' table, no row in software table with name dudu and version 2.0
-There are no configurations defined, will try to deploy with information we have
-Deployment status (False, 'File /home/software_dump/dudu-2.0.tar not found')
+user: hi
+bot : hello there
+user: what are the features of software dudu
+bot : what is the software version?
+user: .0
+bot : feature for software dudu version 2.0 is DUMMY VARIABLE 1 DUMMY VARIABLE 2
+user: what is its hardware requirement?
+bot : hardware for software dudu version 2.0 is DUMMY VARIABLE 1 DUMMY VARIABLE 2
+user: deploy it please
+bot : what is the source_location?
+user: /home/software_dump/
+bot : what is the destination_location?
+user: tomcat
+bot : Missing configuration in 'software' table, no row in software table with name dudu and version 2.0
+bot : There are no configurations defined, will try to deploy with information we have
+bot : Deployment status (False, 'File /home/software_dump/dudu-2.0.tar not found')
 ```
 
 Sample output 2
 ### In this output deployment succeeds
 ```
-hi
-hello there
-what are the features of WatsonSearch
-what is the software version?
-0.0.1
-feature for software WatsonSearch version 0.0.1 is DUMMY VARIABLE 1 DUMMY VARIABLE 2
-can you deploy it please?
-what is the source_location?
-/home/cdpai/software_to_deploy
-what is the destination_location?
-tomcat
-Missing configuration in 'software' table, no row in software table with name WatsonSearch and version 0.0.1
-There are no configurations defined, will try to deploy with information we have
+user: i
+bot : hello there
+user: hat are the features of WatsonSearch
+bot : what is the software version?
+user: .0.1
+bot : feature for software WatsonSearch version 0.0.1 is DUMMY VARIABLE 1 DUMMY VARIABLE 2
+user: an you deploy it please?
+bot : what is the source_location?
+user: home/cdpai/software_to_deploy
+bot : what is the destination_location?
+user: omcat
+bot : Missing configuration in 'software' table, no row in software table with name WatsonSearch and version 0.0.1
+bot : There are no configurations defined, will try to deploy with information we have
 **LOG TRUNCATED**
-WatsonSearch/search/vendor.tomcat.bundle.js.gz
+bot : WatsonSearch/search/vendor.tomcat.bundle.js.gz
 Using CATALINA_BASE:   /home/cdpai/tomcat/apache-tomcat-8.5.20
 Using CATALINA_HOME:   /home/cdpai/tomcat/apache-tomcat-8.5.20
 Using CATALINA_TMPDIR: /home/cdpai/tomcat/apache-tomcat-8.5.20/temp
@@ -68,5 +68,5 @@ Using CATALINA_TMPDIR: /home/cdpai/tomcat/apache-tomcat-8.5.20/temp
 Using JRE_HOME:        /usr
 Using CLASSPATH:       /home/cdpai/tomcat/apache-tomcat-8.5.20/bin/bootstrap.jar:/home/cdpai/tomcat/apache-tomcat-8.5.20/bin/tomcat-juli.jar
 Tomcat started.
-Deployment status (True, 'Deployment successful')
+bot : Deployment status (True, 'Deployment successful')
 ```
