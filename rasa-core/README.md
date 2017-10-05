@@ -1,6 +1,6 @@
 # Rasa Core Sample Implementation
 
-**This implementation is using rasa-core early access, framework might receive updates/changes with time, please vist rasa github for more information**
+**This implementation is using rasa-core early access, framework might receive updates/changes with time, please vist rasa github for more information.**
 
 Rasa Core is a framework which enables us to build a chatbot which is able maintain context and respond to user queries. It is a very flexible framework. It allows us to use any nlu interpreter we want to use, it allows us to connect to external services to pull in the information on user request. We can do lot of things with this framework.
 
