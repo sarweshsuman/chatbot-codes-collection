@@ -1,5 +1,13 @@
 # Rasa NLU Sample Implementation
 
+Rasa-NLU provides two models out of the box,
+- MITIE
+- SpaCy + sklearn
+We can use combinations in following ways,
+ - MITIE + sklearn
+ - SpaCy _ sklearn
+> Performance of these models varies depending on the domain and dataset.
+
 ## This is implementation of intent classification and entity extraction using rasa framework
 
 Usage pattern
@@ -8,7 +16,7 @@ Usage pattern
 python predict.py ./config_mitie.json model_20170908-063537_MITIE
 ```
 
-** Dataset is not uploaded to github **
+**Dataset is not uploaded to github**
 
 Context is created as an stack of states variable.
 > This is sample implementation, but incase you are using rasa-core then context implementation can be done via slots.
@@ -34,3 +42,7 @@ Current state might not have any entities but top of the stack state might have 
 ```
 
 To train rasa-nlu
+
+```
+python -m rasa_nlu.train -c ./config_spacy.json
+```
