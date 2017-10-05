@@ -27,6 +27,7 @@ class PostgresClient:
 	def __init__(self):
 		self.query1="select distinct configuration_id from software where software_name='SOFTWARE_NAME' and software_version='SOFTWARE_VERSION'" 
 		self.query2="select configuration_name from configuration where configuration_id=CONFIGURATION_ID and mandatory='Y'"
+		# To connect to postgres, insert dbname,user,password
 		self.connection_client=psycopg2.connect("dbname='<>' user='<>' host='localhost' password='<>")
 		self.cursor = self.connection_client.cursor()
 
